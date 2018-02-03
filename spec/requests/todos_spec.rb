@@ -40,7 +40,7 @@ RSpec.describe 'Todo API', type: :request do
       let(:todo_id) { 100 }
 
       it 'returns status code 404' do
-        expect(response).to have_http_status(400)
+        expect(response).to have_http_status(404)
       end
 
       it 'returns a not found message' do
