@@ -31,7 +31,7 @@ RSpec.describe 'Item API', type: :request do
       end
 
       it 'returns a not found message' do
-        expect(response.body).to match(/Could't find Todo/)
+        expect(response.body).to match(/Couldn't find Todo/)
       end
     end
   end
@@ -58,7 +58,7 @@ RSpec.describe 'Item API', type: :request do
       end
 
       it 'returns a not found message' do
-        expect(response.body).to match(/Could't find Item/)
+        expect(response.body).to match(/Couldn't find Item/)
       end
     end
   end
