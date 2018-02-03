@@ -23,7 +23,7 @@ RSpec.describe 'Todo API', type: :request do
 
   # GET /todos/:id
   describe 'GET /todos/:id' do
-    before { get '/todos/#{todo_id}' }
+    before { get "/todos/#{todo_id}" }
 
     context 'when the record exists' do
       it 'returns the todo' do
@@ -57,7 +57,7 @@ RSpec.describe 'Todo API', type: :request do
       let(:invalid_attributes) { { title: 'Any title' } }
 
       context 'when the request is valid' do
-        before { post '/todos', params: valid_attributes }
+        before { post "/todos", params: valid_attributes }
 
         it 'creates a todo' do
           expect(json['title']).to eq('A valid todo title')
@@ -69,7 +69,7 @@ RSpec.describe 'Todo API', type: :request do
       end
 
       context 'when the request is invalid' do
-        before { post '/todos', params: invalid_attributes }
+        before { post "/todos", params: invalid_attributes }
 
         it 'returns status code 422 (Unprocessable entity)' do
           expect(response).to have_http_status(422)
@@ -88,7 +88,7 @@ RSpec.describe 'Todo API', type: :request do
     let(:valid_attributes) { { title: 'Walk the dog' } }
 
     context 'when the record exist' do
-      before { put '/todos/#{todo_id}', params: valid_attributes }
+      before { put "/todos/#{todo_id}", params: valid_attributes }
 
       it 'updates the record' do
         expect(response.body).to be_empty
@@ -101,7 +101,7 @@ RSpec.describe 'Todo API', type: :request do
 
     context 'when the record does not exist' do
       let(:todo_id) { 100 }
-      before { put '/todos/#{todo_id}', params: valid_attributes }
+      before { put "/todos/#{todo_id}", params: valid_attributes }
 
       it 'returns status code 404 (Not found)' do
         expect(response).to have_http_status(404)
@@ -112,7 +112,7 @@ RSpec.describe 'Todo API', type: :request do
 
   # DELETE /todos/:id
   describe 'DELETE /todos/:id' do
-    before { delete '/todos/#{todo_id}' }
+    before { delete "/todos/#{todo_id}" }
 
     it 'returns status code 204 (No content)' do
       expect(response).to have_http_status(204)
