@@ -1,24 +1,29 @@
-# README
+# Rails 5 API Exercise
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+This API contains the basics:
 
-Things you may want to cover:
+- [X] Run on Docker
+- [X] REST implementation
+- [WIP] Authentication (username and password)
+- [WIP] Authorization with JWT
+- [NEXT] Pagination
+- [NEXT] Custom error handling
+- [NEXT] Some custom concerns and helpers
+- [NEXT] Live on Heroku
 
-* Ruby version
+## How to run
 
-* System dependencies
+### On Docker
+```
+$ docker-compose build
+$ docker run -itP r5todoapi "rspec"
+$ docker-compose up
+```
 
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+### Stand alone
+```
+$ bundle install
+$ rake db:create
+$ rake db:migrate
+$ bundle exec rspec
+```
