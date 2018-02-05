@@ -9,7 +9,7 @@ This API contains the basics:
 - [NEXT] Pagination
 - [NEXT] Custom error handling
 - [NEXT] Some custom concerns and helpers
-- [NEXT] Live on Heroku
+- [X] Live on Heroku (Entrypoint: https://serene-inlet-37938.herokuapp.com)
 
 ## How to run
 
@@ -18,6 +18,15 @@ This API contains the basics:
 $ docker-compose build
 $ docker run -itP r5todoapi "rspec"
 $ docker-compose up
+```
+
+### On Heroku
+```
+$ docker-compose build
+$ docker run -itP r5todoapi "rspec"
+$ heroku container:push web
+$ heroku run rake db:migrate
+$ heroku open
 ```
 
 ### Stand alone

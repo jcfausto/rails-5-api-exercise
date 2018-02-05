@@ -1,0 +1,8 @@
+{
+  "name": "Rails 5 Todo API Exercise",
+  "description": "A Dockerized Todo Rails 5 API with Authentication & Authorization",
+  "image": "heroku/ruby",
+  "addons": [
+    "heroku-postgresql"
+  ]
+}
