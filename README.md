@@ -16,7 +16,7 @@ This API contains the basics:
 ### On Docker
 ```
 $ docker-compose build
-$ docker run -itP r5todoapi "rspec"
+$ docker-compose run api rspec
 $ docker-compose up
 ```
 
