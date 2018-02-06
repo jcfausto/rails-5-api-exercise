@@ -6,7 +6,7 @@ default: &default
   username: postgres
   password: <%= ENV['DATABASE_PASSWORD'] %>
   encoding: unicode
-  host: <%= ENV['DATABASE_URL'] || postgres %>
+  host: <%= ENV['POSTGRES_PORT_5432_TCP_ADDR'] || ENV['DATABASE_URL'] || postgres %>
   port: 5432
 
 development:
