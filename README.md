@@ -1,5 +1,7 @@
 # Rails 5 API Exercise
 
+This is an API for a Todo application.
+
 This API contains the basics:
 
 - [X] Run on Docker
