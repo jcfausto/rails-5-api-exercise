@@ -4,7 +4,8 @@ This API contains the basics:
 
 - [X] Run on Docker
 - [X] REST implementation
-- [WIP] Authentication (username and password)
+- [X] Serialization
+- [WIP] Authentication (email and password)
 - [WIP] Authorization with JWT
 - [NEXT] Pagination
 - [NEXT] Custom error handling
