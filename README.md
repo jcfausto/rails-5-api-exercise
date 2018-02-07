@@ -7,7 +7,7 @@ This API contains the basics:
 - [X] Serialization
 - [WIP] Authentication (email and password)
 - [WIP] Authorization with JWT
-- [NEXT] Pagination
+- [X] Pagination
 - [NEXT] Custom error handling
 - [NEXT] Some custom concerns and helpers
 - [X] Live on Heroku (Entrypoint: https://serene-inlet-37938.herokuapp.com)
