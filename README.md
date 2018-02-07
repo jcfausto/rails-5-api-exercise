@@ -5,11 +5,14 @@ This API contains the basics:
 - [X] Run on Docker
 - [X] REST implementation
 - [X] Serialization
-- [WIP] Authentication (email and password)
-- [WIP] Authorization with JWT
+- [WIP] Authorization and Authentication
+  - [X] Authentication service (email and password)
+  - [X] Authorization service with JWT
+  - [WIP] Sign up and Login endpoints
 - [X] Pagination
-- [NEXT] Custom error handling
-- [NEXT] Some custom concerns and helpers
+- [X] Custom error handling
+- [X] Custom concerns and helpers
+- [NEXT] API versioning
 - [X] Live on Heroku (Entrypoint: https://serene-inlet-37938.herokuapp.com)
 
 ## How to run
