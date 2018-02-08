@@ -5,7 +5,7 @@ class TodosController < ApplicationController
 
   # GET /todos
   def index
-    @todos = Todo.paginate(page: params[:page], per_page: 20)
+    @todos = current_user.todos.paginate(page: params[:page], per_page: 20)
     json_response(@todos)
   end
 
@@ -16,7 +16,7 @@ class TodosController < ApplicationController
 
   # POST /todos/:id
   def create
-    @todo = Todo.create!(todo_params)
+    @todo = current_user.todos.create!(todo_params)
     json_response(@todo, :created)
   end
 
