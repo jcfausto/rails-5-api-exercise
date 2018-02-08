@@ -7,15 +7,20 @@ This API contains the basics:
 - [X] Run on Docker
 - [X] REST implementation
 - [X] Serialization
-- [WIP] Authorization and Authentication
+- [X] Authorization and Authentication
   - [X] Authentication service (email and password)
   - [X] Authorization service with JWT
-  - [WIP] Sign up and Login endpoints
+  - [X] Sign up and Login endpoints
 - [X] Pagination
 - [X] Custom error handling
 - [X] Custom concerns and helpers
+- [NEXT] Delete account
 - [NEXT] API versioning
 - [X] Live on Heroku (Entrypoint: https://serene-inlet-37938.herokuapp.com)
+
+## API docs available here
+
+[Postman documentation](https://documenter.getpostman.com/view/1104741/collection/RVfsHDmr)
 
 ## How to run
 
