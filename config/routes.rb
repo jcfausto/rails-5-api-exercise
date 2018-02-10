@@ -15,4 +15,5 @@ Rails.application.routes.draw do
   # non-resource routes. Do not require authorization.
   post 'auth/login', to: 'authentication#authenticate'
   post 'signup', to: 'users#create'
+  delete 'delete', to: 'users#destroy'
 end

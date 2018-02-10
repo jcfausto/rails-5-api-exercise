@@ -41,30 +41,37 @@ RSpec.describe 'Users API', type: :request do
     end
   end
 
-  describe 'POST /account/delete' do
-    context 'when request is valid' do
-      before { post '/account/delete', params: valid_attributes, headers: headers}
+  describe 'DELETE /delete/:id' do
+    # create a test user
+    let(:user) { create(:user) }
+    # redefine valid_attributes
+    let(:valid_attributes) {
+      attributes_for(:user, password_confirmation: user.password).to_json
+    }
 
-      it 'destroy users\'s account' do
+    context 'when request is authorized' do
+      before { delete '/delete', params: {}, headers: valid_headers }
+
+      it 'deletes the account' do
         expect(response).to have_http_status(200)
       end
 
-      it 'returns an account deleted success message' do
+      it 'returns an acccount deleted message' do
         expect(json['message']).to match(/Account deleted/)
       end
+
     end
 
-    context 'when request is invalid' do
-      before { post '/account/delete', params: {}, headers: headers}
+    context 'when request is not authorized' do
+      before { delete '/delete', params: {}, headers: headers }
 
       it 'does not delete the account' do
         expect(response).to have_http_status(422)
       end
 
       it 'returns a failure message' do
-        expect(json['message']).to match(/Validation failed/)
+        expect(json['message']).to match(/Missing token/)
       end
-
     end
   end
 end

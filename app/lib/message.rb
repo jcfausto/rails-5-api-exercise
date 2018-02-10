@@ -28,6 +28,10 @@ class Message
     "Account could not be created."
   end
 
+  def self.account_deleted
+    "Account deleted."
+  end
+
   def self.expired_token
     "Expired token. Login to continue."
   end

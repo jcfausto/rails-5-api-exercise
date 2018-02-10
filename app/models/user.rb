@@ -1,6 +1,6 @@
 # app/models/user.rb
 class User < ApplicationRecord
-  has_many :todos, foreign_key: :created_by
+  has_many :todos, foreign_key: :created_by, dependent: :destroy
 
   # Encrypt password
   has_secure_password

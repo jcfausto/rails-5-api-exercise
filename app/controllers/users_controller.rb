@@ -1,7 +1,7 @@
 # app/controllers/users_controller.rb
 class UsersController < ApplicationController
-  skip_before_action :authorize_request, only: :create
-  
+  skip_before_action :authorize_request, only: [:create]
+
   # POST /signup
   # will return an authenticated token upon signup
   def create
@@ -10,6 +10,13 @@ class UsersController < ApplicationController
     auth_token = AuthenticateUser.new(user.email, user.password).call
     response = { message: Message.account_created, auth_token: auth_token}
     json_response(response, :created)
+  end
+
+  # DELETE /destroy
+  # This endpoint requires authorization!
+  def destroy
+    current_user.destroy
+    json_response({ message: Message.account_deleted }.to_json)
   end
 
   private
