@@ -14,7 +14,7 @@ This API contains the basics:
 - [X] Pagination
 - [X] Custom error handling
 - [X] Custom concerns and helpers
-- [NEXT] Delete account
+- [X] Delete account
 - [X] API versioning
 - [X] Live on Heroku (Entrypoint: https://serene-inlet-37938.herokuapp.com)
 
